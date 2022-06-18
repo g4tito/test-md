@@ -40,3 +40,4 @@ client.ev.on('group-participants.update', async (anu) => {
 
 
 
+start()
