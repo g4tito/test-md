@@ -38,7 +38,17 @@ client.ev.on('group-participants.update', async (anu) => {
 })
 
 client.ev.on('messages.upsert', async (up) => {
-
+try {
+  if (!up.messages) return
+  const mek = up.messages[0]
+  const fromMe = mek.key.fromMe
+  const content = JSON.stringify(mek.message)
+  const from = mek.key.remoteJid
+  const type = Object.keys(mek.message)[0]
+} catch (e) {
+  e = String(e)
+  console.log(e)
+}
 })
 
 
