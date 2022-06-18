@@ -37,7 +37,8 @@ client.ev.on('group-participants.update', async (anu) => {
   console.log(anu)
 })
 
-
+client.ev.on('messages.upsert', async (up) => {
+}
 
 
 start()
