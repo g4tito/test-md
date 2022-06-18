@@ -23,7 +23,7 @@ async function start() {
 	const client = makeWASocket({
 		printQRInTerminal: true,
 		logger: pino({ level: 'silent' }),
-		browser: ['Kaori-MD', 'Chrome', '3.0'],
+		browser: ['Test-MD', 'Chrome', '3.0'],
 		auth: state
 	})
     console.log(color('Conectado :3'))
