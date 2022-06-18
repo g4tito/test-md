@@ -18,13 +18,10 @@ const { state, saveState } = useSingleFileAuthState('./test.json')
 
 const fs = require('fs')
 const pino = require('pino')
-const chalk = require('chalk')
 const axios = require("axios")
-const ffmpeg = require('fluent-ffmpeg')
-const moment = require("moment-timezone")
 const { exec, spawn, execSync } = require("child_process")
 
-async function start() {
+async function start() { //Inicio
 	const client = makeWASocket({
 		printQRInTerminal: true,
 		logger: pino({ level: 'silent' }),
@@ -38,19 +35,9 @@ client.ev.on('group-participants.update', async (anu) => {
 })
 
 client.ev.on('messages.upsert', async (up) => {
-try {
-  if (!up.messages) return
-  const mek = up.messages[0]
-  const fromMe = mek.key.fromMe
-  const content = JSON.stringify(mek.message)
-  const from = mek.key.remoteJid
-  const type = Object.keys(mek.message)[0]
-} catch (e) {
-  e = String(e)
-  console.log(e)
-}
+  console.log(up)
 })
 
-}
+} //Final
 
 start()
