@@ -26,7 +26,11 @@ async function start() {
 		browser: ['Test-MD', 'Chrome', '3.0'],
 		auth: state
 	})
-    console.log(color('Conectado :3'))
+console.log(color('Conectado :3'))
+
+client.ev.on('group-participants.update', async (anu) => {
+  console.log(anu)
+})
 
 
 
