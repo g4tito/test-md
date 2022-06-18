@@ -18,6 +18,11 @@ const { state, saveState } = useSingleFileAuthState('./test.json')
 
 const fs = require('fs')
 const pino = require('pino')
+const chalk = require('chalk')
+const axios = require("axios")
+const ffmpeg = require('fluent-ffmpeg')
+const moment = require("moment-timezone")
+const { exec, spawn, execSync } = require("child_process")
 
 async function start() {
 	const client = makeWASocket({
