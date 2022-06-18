@@ -1,0 +1,12 @@
+{
+  "name": "Test-md",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loli.js",
+  "scripts": {
+  "start": "node ."
+  },
+  "dependencies": {
+    "@adiwajshing/baileys": "^4.2.0"
+  }
+} 
